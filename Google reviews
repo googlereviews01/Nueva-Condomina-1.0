@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valora tu experiencia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+        .options {
+            margin-top: 30px;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .option:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .emoji {
+            font-size: 40px;
+            margin-right: 10px;
+        }
+        .text {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .green { color: green; }
+        .yellow { color: goldenrod; }
+        .red { color: red; }
+    </style>
+    <script>
+        function redirectReview(stars) {
+            const baseUrl = "https://g.page/r/CSBte9US8HRhEBM/review";
+            window.location.href = baseUrl;
+        }
+    </script>
+</head>
+<body>
+    <h1>Centro Comercial Nueva Condomina</h1>
+    <p>Gracias por confiar en nosotros. ¿Nos ayudas con una valoración?</p>
+    <div class="options">
+        <div class="option" onclick="redirectReview(5)">
+            <span class="emoji green">😊</span>
+            <span class="text green">★★★★★</span>
+        </div>
+        <div class="option" onclick="redirectReview(3)">
+            <span class="emoji yellow">😐</span>
+            <span class="text yellow">★★★☆☆</span>
+        </div>
+        <div class="option" onclick="redirectReview(1)">
+            <span class="emoji red">😞</span>
+            <span class="text red">★☆☆☆☆</span>
+        </div>
+    </div>
+</body>
+</html>
